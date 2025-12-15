@@ -12,6 +12,7 @@ function convertToObject(sourceString) {
   splitStrings
     .map((line) => line.trim())
     .filter((line) => line.length)
+    .filter((line) => line.includes(':'))
     .forEach((line) => {
       const [property, value] = line.split(':');
 
